@@ -13,7 +13,7 @@ CXXFLAGS = -Wall -c -std=c++11 -I/opt/homebrew/include -D_THREAD_SAFE
 # If your compiler is a bit older you may need to change -std=c++11 to -std=c++0x
 LDFLAGS = $(SDL)
 DEPS = $(wildcard *.h)
-OBJS = $(patsubst %.cpp,$(builddir)%.o,$(wildcard *.cpp))  
+OBJS = $(patsubst %.cpp,$(builddir)%.o,$(wildcard *.cpp))  $(patsubst cpppainter/%.cpp,$(builddir)%.o,$(wildcard cpppainter/*.cpp)) 
 builddir = build/
 
 all: draw
