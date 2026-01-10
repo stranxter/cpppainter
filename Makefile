@@ -1,7 +1,5 @@
 #Инструкции как да конфигурираме Visual Studio
-#и SDL2 може да видите тук:
-#
-#http://www.willusher.io/sdl2%20tutorials/2013/08/15/lesson-0-visual-studio
+#и SDL2 може да видите във файла sdl2-windows-instructions.md
 #
 #За Linux & Mac OS ползвайте приложения Makefile.
 #
