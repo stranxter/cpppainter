@@ -99,7 +99,7 @@ namespace paint
 
         void drawText (int x, int y, int size, const char* text)
         {
-            TTF_Font *font = TTF_OpenFont("images/roboto.ttf", size);
+            TTF_Font *font = TTF_OpenFont("cpppainter/images/roboto.ttf", size);
             assert(font != nullptr);
             SDL_Color color = {_r, _g, _b};
             SDL_Surface *surface = TTF_RenderText_Solid(font,text,color);
