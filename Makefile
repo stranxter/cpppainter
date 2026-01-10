@@ -25,7 +25,7 @@ $(builddir)%.o: %.cpp $(DEPS)
 	@mkdir -p $(@D)
 	@$(CXX) -c -o $@ $< $(CXXFLAGS)
 
-$(builddir)%.o: draw/%.cpp $(DEPS)
+$(builddir)%.o: cpppainter/%.cpp $(DEPS)
 	@mkdir -p $(@D)
 	@$(CXX) -c -o $@ $< $(CXXFLAGS)
 
