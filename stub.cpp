@@ -1,18 +1,26 @@
 /*
-Стартов файл за използване на SDL Wrapper
+Стартов файл за използване на SDL обвиваката paint
 */
 #include "sdlwrapper.h"
 
 
 int main()
 {
-    sdlw::setColor(255,255,255);
+    paint::drawLine(0,0,200,200);
 
-    sdlw::drawLine(0,0,200,200);
-    sdlw::drawText(0,50,20,"Hello!");
+    paint::turtle::jump(200,200);
+    paint::turtle::down();
 
-    sdlw::updateGraphics();
-    sdlw::waitKeypress();
+    for(int i=0;i<4;i++)
+    {
+        paint::turtle::forward(100);
+        paint::turtle::right(90);
+    }
+
+    paint::drawText(220,230,20,"Hello!");
+    
+    paint::updateGraphics();
+    paint::waitKeypress();
 
     return 0;
 }

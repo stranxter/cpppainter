@@ -5,7 +5,7 @@
 #include <SDL2/SDL_ttf.h>
 #include <assert.h>
 
-namespace sdlw
+namespace paint
 {
 
         void setColor(Uint8 r, Uint8 g, Uint8 b);
@@ -18,5 +18,22 @@ namespace sdlw
 
         void updateGraphics();
         void waitKeypress();
+
+        namespace turtle
+        {
+             struct Pen
+             {
+                double x;
+                double y;
+                bool down;
+                double angle; /*dgrees*/
+             };
+             void down();
+             void up();
+             void forward(double distance);
+             void left(double a);
+             void right(double a);
+             void jump(double x, double y);
+        }
 
 }

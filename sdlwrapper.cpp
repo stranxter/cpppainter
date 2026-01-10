@@ -5,7 +5,7 @@
 #include <SDL2/SDL_ttf.h>
 #include <assert.h>
 
-namespace sdlw
+namespace paint
 {
 
         //global variables for SLD window and renderer
@@ -41,6 +41,7 @@ namespace sdlw
 
                 setColor(0, 0, 0);
                 SDL_RenderClear(SDLRen);
+                setColor(255, 255, 255);
             }
             ~SdlInit() 
             {
@@ -175,4 +176,48 @@ namespace sdlw
                 }
             }            
         }
+
+        namespace turtle
+        {
+             Pen p = {0,0,false,0};
+
+             void down()
+             {
+                p.down = true;
+             }
+             void up()
+             {
+                p.down = false;
+             }
+             void forward(double distance)
+             {
+                double rad = p.angle * 3.14159265358979323846 / 180.0;
+                int newX = p.x + distance * cos(rad);
+                int newY = p.y + distance * sin(rad);
+                if(p.down)
+                {
+                    drawLine(static_cast<int>(p.x), static_cast<int>(p.y), newX, newY);
+                }
+                p.x = newX;
+                p.y = newY;
+             }
+             void left(double a)
+             {
+                p.angle -= a;
+                if(p.angle < 0)
+                    p.angle += 360;
+             }
+             void right(double a)
+             {
+                p.angle += a;
+                if(p.angle >= 360)
+                    p.angle -= 360;
+             }
+             void jump(double x, double y)
+             {
+                p.x = x;
+                p.y = y;
+             }
+        }
+
 }
