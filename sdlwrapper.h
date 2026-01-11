@@ -33,6 +33,7 @@ namespace paint
              void forward(double distance);
              void left(double a);
              void right(double a);
+             void turnto(double a);
              void jump(double x, double y);
         }
 

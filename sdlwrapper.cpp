@@ -213,6 +213,10 @@ namespace paint
                 if(p.angle >= 360)
                     p.angle -= 360;
              }
+             void turnto(double a)
+             {
+                p.angle = a;
+             }
              void jump(double x, double y)
              {
                 p.x = x;
