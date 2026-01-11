@@ -192,11 +192,11 @@ namespace paint
              void forward(double distance)
              {
                 double rad = p.angle * 3.14159265358979323846 / 180.0;
-                int newX = p.x + distance * cos(rad);
-                int newY = p.y + distance * sin(rad);
+                double newX = p.x + distance * cos(rad);
+                double newY = p.y + distance * sin(rad);
                 if(p.down)
                 {
-                    drawLine(static_cast<int>(p.x), static_cast<int>(p.y), newX, newY);
+                    drawLine(static_cast<int>(p.x), static_cast<int>(p.y), static_cast<int>(newX), static_cast<int>(newY));
                 }
                 p.x = newX;
                 p.y = newY;
