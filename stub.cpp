@@ -4,7 +4,7 @@
 */
 
 /*
-#include "sdlwrapper.h"
+#include "cpppainter/sdlwrapper.h"
 
 
 int main()
