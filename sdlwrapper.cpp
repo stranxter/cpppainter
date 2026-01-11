@@ -201,6 +201,12 @@ namespace paint
                 p.x = newX;
                 p.y = newY;
              }
+             void backward(double distance)
+             {
+                left(180);
+                forward(distance);
+                right(180);
+             }
              void left(double a)
              {
                 p.angle -= a;

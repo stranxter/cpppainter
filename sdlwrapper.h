@@ -31,6 +31,7 @@ namespace paint
              void down();
              void up();
              void forward(double distance);
+             void backward(double distance);
              void left(double a);
              void right(double a);
              void turnto(double a);
