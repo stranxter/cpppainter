@@ -119,7 +119,7 @@ namespace paint
             TTF_CloseFont(font);
         }
 
-        void waitKeypress()
+        void waitKeypress(int key)
         {
             SDL_Event e;
             bool quit = false;
@@ -128,7 +128,7 @@ namespace paint
                     if (e.type == SDL_QUIT) {
                         quit = true;
                     }
-                    else if (e.type == SDL_KEYDOWN) {
+                    else if (e.type == SDL_KEYDOWN && e.key.keysym.sym == key) {
                         quit = true;
                     }
                 }

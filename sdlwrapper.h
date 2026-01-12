@@ -17,7 +17,7 @@ namespace paint
         void drawText(int x, int y, int size, const char* text);
 
         void updateGraphics();
-        void waitKeypress();
+        void waitKeypress(int key = 27);
 
         namespace turtle
         {
